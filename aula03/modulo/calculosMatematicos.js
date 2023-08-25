@@ -33,7 +33,7 @@ function calculadora(numero1, numero2, tipoCalculo){
                                 //Impede de dividir por zero
                                 if(operacao == '/' && n2 == 0){
 
-                                    console.log('Desculpe, zero não é divisivel n/ Tente novamente!')
+                                    console.log('Desculpe, zero não é divisivel, /n '+'Tente novamente!')
                                     
 
                                 } else{

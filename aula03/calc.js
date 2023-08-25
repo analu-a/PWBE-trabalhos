@@ -48,14 +48,14 @@ let escolha = operacoes.toLowerCase()
            
             
             resultado = calculosMatematicos.calculadora(n1, n2, operacoes)
-            if(resultado){
+            if(resultado)
                 console.log(resultado)
-            } else {
-                entradaDados.close()
-            }
+
+            entradaDados.close()
+
             
     
-    }
+         }
 })
 
 })
