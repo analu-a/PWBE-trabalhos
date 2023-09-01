@@ -31,9 +31,6 @@ let preco = Informacoes.replace(',' , '.')
 
         if(preco == "" || isNaN(preco)){
             console.log("Digite um valor válido!!!")
-        } else if(preco == 0){
-            console.log('Desculpe, não é possivel calcular apenas com zero!!!')
-
         }else{
         
             resultado = calculoPreco.calculo(codigo, preco)
