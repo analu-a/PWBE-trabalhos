@@ -6,7 +6,7 @@ vendas                                                            *
 * Versão: 1.0                                                     *
 * *************************************************************** */ 
 
-
+//Importar minha biblioteca
 var calculoPreco = require('./modulo/calculoPreco.js')
 
 var readline = require('readline')
@@ -27,8 +27,7 @@ let preco = Informacoes.replace(',' , '.')
         preco = Number(preco)
 
    
-        
-
+        //Tratamento de erro
         if(preco == "" || isNaN(preco)){
             console.log("Digite um valor válido!!!")
         }else{
@@ -45,11 +44,6 @@ let preco = Informacoes.replace(',' , '.')
 })
 
 
-
-// function calculo (preco, total){
-//     let resultado = total
-//     let escolha = preco
-
-
-
-// }
+/*Tem que colocar entre () o que eu quero que a outra pasta veja,
+Exemplo: resultado = calculoPreco.calculo(codigo, preco)
+*/
