@@ -7,6 +7,7 @@ vendas                                                            *
 * *************************************************************** */ 
 
 
+var calculoPreco = require('./modulo/calculoPreco.js')
 
 var readline = require('readline')
 var entradaDados = readline.createInterface({
@@ -25,14 +26,23 @@ let preco = Informacoes.replace(',' , '.')
 
         preco = Number(preco)
 
-        let resultado
-        let resultado2
+   
         
-   if(codigo == "1"){
-        resultado = preco * 0.08
-        resultado2 = preco + resultado
-        console.log(resultado2)
-   }
+
+        if(preco == "" || isNaN(preco)){
+            console.log("Digite um valor válido!!!")
+        } else if(preco == 0){
+            console.log('Desculpe, não é possivel calcular apenas com zero!!!')
+
+        }else{
+        
+            resultado = calculoPreco.calculo(codigo, preco)
+            if(resultado){
+                console.log(resultado)
+            }
+   
+        }
+   entradaDados.close()
     })
 
 })
