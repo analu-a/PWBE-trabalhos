@@ -25,7 +25,7 @@ const calcularTabuada = function(valorTabuada, contadorInicial, contadorFinal){
    
 
     //Validação para organizar valores menores e maiores
-    if(contFinal < contInicial){
+    if(Number(contFinal) < Number(contInicial)){
         contFinal = contadorInicial
         contInicial = contadorFinal
     }
@@ -41,12 +41,21 @@ const calcularTabuada = function(valorTabuada, contadorInicial, contadorFinal){
         tabuada = Number(tabuada)
 
         //Exemplo usando while
-        while(contInicial <= contFinal){
+        // while(contInicial <= contFinal){
 
+        //     resultado = tabuada*contInicial
+        //     console.log(`${tabuada} X ${contInicial} = ${resultado}`)
+        //     contInicial = contInicial +1
+        //     contInicial++
+
+        //     status = true
+        // }
+
+        //Exemplo usando FOR
+
+        for(; contInicial <= contFinal; contInicial++){
             resultado = tabuada*contInicial
             console.log(`${tabuada} X ${contInicial} = ${resultado}`)
-            contInicial++
-
             status = true
         }
     }
@@ -55,4 +64,6 @@ const calcularTabuada = function(valorTabuada, contadorInicial, contadorFinal){
 
 }
 
-console.log(calcularTabuada(0,10))
+module.exports = {
+    calcularTabuada
+}
