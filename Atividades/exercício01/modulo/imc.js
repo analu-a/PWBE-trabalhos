@@ -17,14 +17,15 @@ const calculoImc = function (peso, altura){
 const validacaoPeso = function(resultadoImc){
 
     let situacaoImc
+    
 
     if(resultadoImc < 18.5){
-        situacaoImc = console.log('Você está abaixo do peso')
+        situacaoImc = 'Você está abaixo do peso'
      
         }else if(resultadoImc >= 18.5 && resultadoImc <= 24.9){
             situacaoImc = 'Você está com o peso normal'
      
-        }else if(resultadoImc >= 25 && resultadoImc <= 29,9){
+        }else if(resultadoImc >= 25 && resultadoImc <= 29.9){
             situacaoImc = 'Você está acima do peso'
      
         }else if(resultadoImc >= 30 && resultadoImc <= 34.9){
@@ -39,5 +40,9 @@ const validacaoPeso = function(resultadoImc){
         return situacaoImc
 }
 
-console.log(calculoImc('50' , '2,0')), console.log(validacaoPeso('18.5'))
+// console.log(calculoImc('50' , '2,0')), console.log(validacaoPeso('18.5'))
 
+module.exports = {
+    calculoImc,
+    validacaoPeso
+}
