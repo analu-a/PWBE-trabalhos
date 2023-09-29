@@ -13,7 +13,7 @@ Nome do aluno;
 ● 4 Notas que podem ser entre 0 e 100;*
 * *************************************************************** */
 
-var imc = require('./modulo/media.js')
+var media = require('./modulo/media.js')
 var readline = require('readline')
 
 var entradaDados = readline.createInterface({
@@ -21,10 +21,12 @@ var entradaDados = readline.createInterface({
     output: process.stdout
 })
 
+let notaExame
+
 entradaDados.question('Nome do aluno(a): ', function (nomeAluno) {
     let nome = nomeAluno
 
-    entradaDados.question('Sexo do professor(a): ', function (generoAluno) {
+    entradaDados.question('Sexo do aluno(a): ', function (generoAluno) {
         let sexoAluno = generoAluno
 
         entradaDados.question('Nome do professor(a): ', function (professor) {
@@ -33,7 +35,7 @@ entradaDados.question('Nome do aluno(a): ', function (nomeAluno) {
             entradaDados.question('Sexo do professor(a): ', function (genero) {
                 let sexoProfessor = genero
 
-                entradaDados.question('Nome do professor(a): ', function (curso) {
+                entradaDados.question('Nome do curso(a): ', function (curso) {
                     let nomeCurso = curso
 
 
@@ -55,11 +57,20 @@ entradaDados.question('Nome do aluno(a): ', function (nomeAluno) {
 
                                         if(nota1 <0 || nota1 >100 || nota2 <0 || nota2 >100 || nota3 <0 || nota3 >100 || nota4 <0 || nota4 >100  ){
                                             console.log('ERRO: Digite valores entre 0 e 100')
+                                        } else{
+
+                                            let mostrarMedia = media.calculoMedia(nota1, nota2, nota3, nota4)
+                                            console.log(mostrarMedia)
+
                                         }
 
 
 
-                                            if(resultadoMedia >= 50 && resultadoMedia <= 69){}
+                                            // if(resultadoMedia >= 50 && resultadoMedia <= 69){
+                                            //    console.log('Que pena, você ficou em exame, digite sua nota: ')
+
+                                            //    notaExame.calcularValorExame
+                                            // }
 
 
 
